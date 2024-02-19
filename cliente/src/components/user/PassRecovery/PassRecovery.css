@@ -1,0 +1,47 @@
+.password-recovery-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.password-recovery-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.password-recovery-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-recovery-form button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.password-recovery-form button:hover {
+  background-color: #0056b3;
+}
+
+.reset-message {
+  margin-top: 15px;
+  color: rgb(41, 185, 41);
+}
+.e-reset {
+  max-width: 15rem;
+}
+.email-label {
+  color: #646464;
+  font-weight: 300;
+}

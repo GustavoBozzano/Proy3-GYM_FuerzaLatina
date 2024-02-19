@@ -1,0 +1,159 @@
+.GymFont {
+  display: flex;
+  font-family: "Black Ops One", system-ui;
+  font-size: 2rem;
+  padding: 60px;
+  color: #fdfdfd;
+  text-shadow: 10px 10px 10px #0016a5;
+  align-items: center;
+  justify-content: center;
+}
+
+.GymFont2 {
+  display: flex;
+  font-family: "Black Ops One", system-ui;
+  font-size: 2rem;
+  color: #fdfdfd;
+  text-shadow: 10px 10px 10px #0016a5;
+  align-items: start;
+  justify-content: center;
+}
+
+h4 {
+  display: flex;
+  font-size: 1.3rem;
+  color: #fdfdfd;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  object-fit: fill;
+  object-position: 0% 0%;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.homePage > img {
+  width: 50%;
+  height: 50%;
+}
+.sesion {
+  display: flex;
+  background-color: rgba(70, 138, 227, 0.616);
+  max-height: 50%;
+  max-width: 50%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  /* border-width: 5px;
+  border-style: solid;
+  border-color: #fdfdfd; */
+  border-radius: 25px;
+}
+
+.no-login {
+  margin: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+/*******************  MÓVIL  **********************/
+
+@media (max-width: 768px) {
+  .sesion {
+    display: flex;
+    background-color: rgba(70, 138, 227, 0.616);
+    max-height: 80%;
+    max-width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 15vh;
+  }
+
+  h3 {
+    color: rgb(166, 171, 169);
+    font-size: 2rem;
+  }
+
+  .GymFont {
+    display: flex;
+    font-family: "Black Ops One", system-ui;
+    font-size: 1rem;
+    /* margin-top: 1rem; */
+    color: #fdfdfd;
+    text-shadow: 10px 10px 10px #0016a5;
+    transform: rotateY(20%);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .no-login {
+    margin: 20%;
+  }
+}
+
+/****************** TABLET *******************/
+
+@media (max-width: 1300px) {
+  .GymFont2,
+  h2 {
+    font-size: 1vh;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  h3 {
+    color: rgb(166, 171, 169);
+    font-size: 1.3rem;
+  }
+
+  .sesion {
+    display: flex;
+    background-color: rgba(70, 138, 227, 0.616);
+    max-height: 50vh;
+    max-width: 80vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 15vh;
+  }
+
+  .GymFont {
+    font-family: "Black Ops One", system-ui;
+    font-size: 1rem;
+    /* margin-top: 1rem; */
+    color: #fdfdfd;
+    text-shadow: 10px 10px 10px #0016a5;
+    transform: rotateY(20%);
+  }
+
+  img {
+    object-fit: fill;
+    object-position: 0% 0%;
+    background-size: contain;
+  }
+
+  .no-login {
+    margin: 20%;
+  }
+  .homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  .homePage > img {
+    width: 20%;
+    height: 20%;
+  }
+}

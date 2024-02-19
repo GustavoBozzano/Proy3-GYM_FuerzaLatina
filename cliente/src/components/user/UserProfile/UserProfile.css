@@ -1,0 +1,76 @@
+.user-profile-container {
+  max-width: 600px;
+  margin: 15vh auto;
+  padding-bottom: 5vh;
+  border-radius: 25px;
+  background-color: rgba(70, 138, 227, 0.616);
+  color: white;
+  text-align: center;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile-container h2 {
+  margin-bottom: 20px;
+}
+
+.user-profile-info {
+  margin-bottom: 20px;
+}
+
+.edit-profile-button {
+  margin: 0 auto;
+  width: 40%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #32322f;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-profile-button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  font-size: 5vh;
+}
+
+/*********************** MOVIL ****************************/
+
+@media (max-width: 768px) {
+  .user-profile-container {
+    max-width: 500px;
+    max-height: 250px;
+    margin: 14vh auto;
+    padding: 4vh 1vh;
+    border-radius: 8px;
+    background-color: rgba(70, 138, 227, 0.616);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 5vh;
+  }
+}
+
+/*********************** TABLET ****************************/
+
+@media (max-width: 1300px) {
+  .user-profile-container {
+    max-width: 500px;
+    max-height: 250px;
+    margin: 14vh auto;
+    padding: 4vh 3vh;
+    border-radius: 8px;
+    background-color: rgba(70, 138, 227, 0.616);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 5vh;
+  }
+}

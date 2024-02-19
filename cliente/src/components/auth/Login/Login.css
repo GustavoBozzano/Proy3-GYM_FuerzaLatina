@@ -1,0 +1,84 @@
+.login-form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(70, 138, 227, 0.616);
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fdfdfd;
+}
+
+.login-form input {
+  width: 93%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #32322f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  font-family: "Black Ops One", system-ui;
+  font-size: 2rem;
+  padding-top: 8vh;
+  color: #fdfdfd;
+  text-shadow: 10px 10px 10px #0016a5;
+  align-items: center;
+}
+
+/*******************  MÓVIL  **********************/
+
+@media (max-width: 768px) {
+  .login-form {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(70, 138, 227, 0.616);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+    border-width: 3px;
+    border-style: solid;
+    border-color: #fdfdfd;
+  }
+}
+
+/****************** TABLET *******************/ 
+
+@media (max-width: 1300px) {
+    .login-form {
+      max-width: 300px;
+      margin: 3vh auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba(70, 138, 227, 0.616);
+      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+      border-width: 3px;
+      border-style: solid;
+      border-color: #fdfdfd;
+    }
+
+    h2 {
+      font-family: "Black Ops One", system-ui;
+      font-size: 2rem;
+      padding-top: 3vh;
+      color: #fdfdfd;
+      text-shadow: 10px 10px 10px #0016a5;
+      align-items: center;
+    }
+  }

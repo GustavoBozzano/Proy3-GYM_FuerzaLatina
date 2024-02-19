@@ -1,0 +1,7 @@
+span.like-toggle-heart {
+  font-size: 30px;
+}
+
+span.like-toggle-heart:hover {
+  color: darkred;
+}

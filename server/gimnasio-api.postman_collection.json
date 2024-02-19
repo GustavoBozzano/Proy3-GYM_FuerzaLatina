@@ -1,0 +1,596 @@
+{
+	"info": {
+		"_postman_id": "588bba59-c009-447d-82ac-311f9bb9f8ff",
+		"name": "gimnasio-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31390999"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"gusty\",\r\n    \"email\": \"gustavo.tecnicoftth@gmail.com\",\r\n    \"password\": \"Floripa1.!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gustavojorgebozzano@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userProfilePublic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTcwNjU0OTU5NywiZXhwIjoxNzA2ODA4Nzk3fQ.YtRp4AMP81cxCN7Ohx49gtsOo4M3MQVG97SA4l6GwY0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3050/api/users/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userProfilePrivate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTcwNjYzOTA3NCwiZXhwIjoxNzA2ODk4Mjc0fQ.5Xr__4CTQVS2K-qu5oFSb3LawcFnDmhlbr5HqlFUpD4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3050/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recoverPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gustavo.tecnicoftth@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/users/password/recover",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"password",
+								"recover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRecoverPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gustavo.tecnicoftth@gmail.com\",\r\n    \"recoverPassCode\": \"1jH0L1asU8\",\r\n    \"newPassword\": \"Floripa1.!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/users/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserName",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTcwNjYzOTA3NCwiZXhwIjoxNzA2ODk4Mjc0fQ.5Xr__4CTQVS2K-qu5oFSb3LawcFnDmhlbr5HqlFUpD4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Gus",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/users/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifUsername",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTcwNjYzOTA3NCwiZXhwIjoxNzA2ODk4Mjc0fQ.5Xr__4CTQVS2K-qu5oFSb3LawcFnDmhlbr5HqlFUpD4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Gusty",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/check/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"check",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exercises",
+			"item": [
+				{
+					"name": "newExercise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA3NTgxNDcwLCJleHAiOjE3MDc4NDA2NzB9.lyEnDgWoonroKZcvFrU_QcMFd4tknpblF4ulhs4aS4o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Remo Unilateral Apoyo en Banco",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "En el Remo Unilateral con Apoyo en Banco, te apoyas en un banco con una rodilla y una mano, mientras sostienes una mancuerna con la otra mano. La espalda permanece recta y paralela al suelo. Realizas el movimiento de remo llevando la mancuerna hacia tu cadera, asegurándote de contraer el músculo dorsal ancho y los romboides. Este ejercicio se centra en el trabajo unilateral, promoviendo el equilibrio y la fuerza en ambos lados del cuerpo.",
+									"type": "text"
+								},
+								{
+									"key": "typology",
+									"value": "fuerza",
+									"type": "text"
+								},
+								{
+									"key": "muscle_group",
+									"value": "Espalda (principalmente el músculo dorsal ancho y los romboides)",
+									"type": "text"
+								},
+								{
+									"key": "equipment",
+									"value": "Banco y mancuerna",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/Gustavo/Documents/Certificados/Hack_a_Boss/PROYECTO 2 - APP para el entrenamiento/GYM-API/2 - BACK2/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/NewExercises",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"NewExercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifExercise",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA3ODQ5MTcxLCJleHAiOjE3MDgxMDgzNzF9.qGeKG55-tcwY1150dTjYemVAL0rYLEE96MvkR-r3vfI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Weighted Dip Tri-Set",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "El Fondo con Peso en Tri Set es un ejercicio compuesto para fuerza que implica realizar fondos con peso en tres posiciones diferentes. Este ejercicio trabaja intensamente los tríceps. Realiza 3 series hasta el fallo en cada posición, con una transición inmediata de fondos con peso a fondos con peso corporal y fondos asistidos...",
+									"type": "text"
+								},
+								{
+									"key": "typology",
+									"value": "fuerza",
+									"type": "text"
+								},
+								{
+									"key": "muscle_group",
+									"value": "Tríceps",
+									"type": "text"
+								},
+								{
+									"key": "equipment",
+									"value": "Barra paralela y peso adicional",
+									"type": "text"
+								},
+								{
+									"key": "img1",
+									"type": "file",
+									"src": "/C:/Users/Gustavo/Documents/Certificados/Hack_a_Boss/PROYECTO 2 - APP para el entrenamiento/GYM-API/5 - TRICEPS/4.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/modifExercise/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"modifExercise",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allExercises",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA3NTgxNDcwLCJleHAiOjE3MDc4NDA2NzB9.lyEnDgWoonroKZcvFrU_QcMFd4tknpblF4ulhs4aS4o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3050/api/exercises",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exerciseById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA4MDk2NjAxLCJleHAiOjE3MDgzNTU4MDF9.BJmMj9YHbW6fYzcMhSGkjeB_TWoWjX3FcGoLWVqgA8Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3050/api/exercise/26",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"exercise",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExerciseById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA3ODQ5MTcxLCJleHAiOjE3MDgxMDgzNzF9.qGeKG55-tcwY1150dTjYemVAL0rYLEE96MvkR-r3vfI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3050/api/deleteExercise/17",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"deleteExercise",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "likeExercise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA4MDk2NjAxLCJleHAiOjE3MDgzNTU4MDF9.BJmMj9YHbW6fYzcMhSGkjeB_TWoWjX3FcGoLWVqgA8Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/exercise/like/27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"exercise",
+								"like",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listLikeExercise",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA4MDk2NjAxLCJleHAiOjE3MDgzNTU4MDF9.BJmMj9YHbW6fYzcMhSGkjeB_TWoWjX3FcGoLWVqgA8Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3050/api/listlikes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"listlikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisLikeExercise",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzA4MDk2NjAxLCJleHAiOjE3MDgzNTU4MDF9.BJmMj9YHbW6fYzcMhSGkjeB_TWoWjX3FcGoLWVqgA8Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3050/api/dislike/27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3050",
+							"path": [
+								"api",
+								"dislike",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

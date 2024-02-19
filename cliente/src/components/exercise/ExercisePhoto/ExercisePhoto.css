@@ -1,0 +1,30 @@
+.exercise-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.entry-title {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.errorPhotoSubmit {
+  font-size: 18px; /* Tamaño de texto aumentado */
+  color: black; /* Color de texto negro */
+}
+
+/* Agrega estilos específicos para el modal de error si es necesario */

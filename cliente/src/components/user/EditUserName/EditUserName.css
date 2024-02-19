@@ -1,0 +1,38 @@
+.edit-name-form {
+  max-width: 400px;
+  margin: 7% auto;
+  padding: 5%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff99;
+  text-align: center;
+}
+
+.name-input {
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+

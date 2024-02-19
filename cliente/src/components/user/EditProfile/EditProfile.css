@@ -1,0 +1,96 @@
+.edit-profile-container {
+  max-width: 600px;
+  margin: 10vh auto;
+  padding-top: 1vh;
+  padding-bottom: 5vh;
+  border-radius: 8px;
+  background-color: rgba(70, 138, 227, 0.616);;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+  
+}
+
+.edit-profile-container h1 {
+  font-family: "Black Ops One", system-ui;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: #fdfdfd;
+  text-shadow: 10px 10px 10px #0016a5;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.edit-profile-link {
+  display: flex;
+  margin: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.edit-profile-link:hover {
+  text-decoration: underline;
+}
+
+.edit-profile-button-cancel {
+  margin: 0 auto;
+  display: block;
+  width: 40%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-profile-button:hover {
+  background-color: #c82333;
+}
+
+.edit-profile-button .edit-profile-button-cancel {
+  max-height: 1px;
+}
+.center {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*************** MOVIL **************/
+
+@media (max-width: 768px) {
+  .edit-profile-container {
+    max-width: 600px;
+    margin: 10% auto;
+    padding-top: 1vh;
+    padding-bottom: 5vh;
+    border-radius: 8px;
+    background-color: rgba(70, 138, 227, 0.616);;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+
+  .edit-profile-container h1 {
+    font-family: "Black Ops One", system-ui;
+    font-size: 4vh;
+    margin-top: 1rem;
+    color: #fdfdfd;
+    text-shadow: 10px 10px 10px #0016a5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .edit-profile-link {
+    display: flex;
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+  }
+}
+
+
