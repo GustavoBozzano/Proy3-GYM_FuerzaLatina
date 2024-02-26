@@ -38,7 +38,7 @@ h2 {
   font-size: 2rem;
   padding-top: 8vh;
   color: #fdfdfd;
-  text-shadow: 10px 10px 10px #0016a5;
+  text-shadow: 5px 5px 5px #0016a5;
   align-items: center;
 }
 
@@ -58,27 +58,27 @@ h2 {
   }
 }
 
-/****************** TABLET *******************/ 
+/****************** TABLET *******************/
 
 @media (max-width: 1300px) {
-    .login-form {
-      max-width: 300px;
-      margin: 3vh auto;
-      padding: 20px;
-      border-radius: 8px;
-      background-color: rgba(70, 138, 227, 0.616);
-      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
-      border-width: 3px;
-      border-style: solid;
-      border-color: #fdfdfd;
-    }
-
-    h2 {
-      font-family: "Black Ops One", system-ui;
-      font-size: 2rem;
-      padding-top: 3vh;
-      color: #fdfdfd;
-      text-shadow: 10px 10px 10px #0016a5;
-      align-items: center;
-    }
+  .login-form {
+    max-width: 300px;
+    margin: 3vh auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(70, 138, 227, 0.616);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
+    border-width: 3px;
+    border-style: solid;
+    border-color: #fdfdfd;
   }
+
+  h2 {
+    font-family: "Black Ops One", system-ui;
+    font-size: 2rem;
+    padding-top: 3vh;
+    color: #fdfdfd;
+    text-shadow: 5px 5px 5px #0016a5;
+    align-items: center;
+  }
+}

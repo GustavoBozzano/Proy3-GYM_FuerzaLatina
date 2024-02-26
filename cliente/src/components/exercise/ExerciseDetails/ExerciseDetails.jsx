@@ -57,11 +57,25 @@ const ExerciseDetails = () => {
 
   const { name, description, typology, muscle_group, equipment } = exercise;
 
+  const getMainPhoto = () => {
+    // Si hay fotos, devuelve la URL de la primera foto
+    if (exercise.photos && exercise.photos.length > 0) {
+      return exercise.photos[0].name;
+    }
+    // Si no hay fotos, devuelve la URL de la imagen por defecto
+    return defaultExercise;
+  };
+
   return (
     <div>
       <div className="exercise-details-container">
         <div className="foto-list">
-          {exercise.photos &&
+          <img
+            src={getMainPhoto()}
+            alt={`Main Photo`}
+            className="exercise-foto"
+          />
+          {/* {exercise.photos &&
             exercise.photos.map((photo) => (
               <img
                 key={photo.id_photo_exercise}
@@ -69,7 +83,7 @@ const ExerciseDetails = () => {
                 alt={`photo ${photo.id_photo_exercise}`}
                 className="exercise-foto"
               />
-            ))}
+            ))} */}
         </div>
         {error && <p>{error}</p>}
         {loading && <h1>LOADING ...</h1>}
