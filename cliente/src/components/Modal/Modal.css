@@ -11,7 +11,7 @@
 }
 
 .modal-content {
-  background-color: rgba(70, 138, 227);;
+  background-color: rgba(70, 138, 227);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.7);
@@ -20,6 +20,6 @@
 @media (max-width: 768px) {
   .modal-content {
     max-width: 300px;
-    max-height: 50%;
+    max-height: 100%;
   }
 }

@@ -12,7 +12,7 @@ function Home() {
     <div className="sesion">
       {isAuthenticated && user ? (
         <div className="homePage">
-          <h2 className="GymFont"> ¡BIENVENIDO {user.username} !</h2>
+          <h2 className="GymFont"> ¡HOLA {user.username} !</h2>
           <img className="logo" src={logo} />
         </div>
       ) : (

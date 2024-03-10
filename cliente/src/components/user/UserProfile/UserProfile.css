@@ -33,6 +33,7 @@
 
 .edit-profile-button:hover {
   background-color: #0056b3;
+  transition: 0.3s all;
 }
 
 h2 {

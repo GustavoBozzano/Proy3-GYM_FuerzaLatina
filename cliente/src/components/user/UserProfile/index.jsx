@@ -21,7 +21,7 @@ const UserProfile = ({ toggleEditing }) => {
         {user.username}
       </p>
       <p className="user-profile-info">
-        <b>tipo de Usuario: </b>
+        <b>Tipo de Usuario: </b>
         {user.role}
       </p>
 

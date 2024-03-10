@@ -57,7 +57,7 @@ function NewExercise() {
 
   return (
     <div className="new-exercise-form">
-      <h2>Crea un nuevo ejercicio</h2>
+      <h2>Crea un ejercicio</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="name">Nombre:</label>
@@ -144,7 +144,11 @@ function NewExercise() {
         <button type="submit" className="btn btn-primary">
           Crear Ejercicio
         </button>
-        <Link className="btn-cancelar" to="#" onClick={() => window.history.back()}>
+        <Link
+          className="btn-cancelar"
+          to="#"
+          onClick={() => window.history.back()}
+        >
           Cancelar
         </Link>
       </form>

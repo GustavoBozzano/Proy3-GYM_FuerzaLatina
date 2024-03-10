@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./Navbar.css";
 import ExerciseList from "../../pages/ExerciseList/ExerciseList";
-import logo from "../../assets/logo3.png"
+import logo from "../../assets/logo3.png";
 
 function Navbar() {
   const { isAuthenticated, logout } = useContext(AuthContext);
@@ -16,16 +16,18 @@ function Navbar() {
   return (
     <div className="navbar">
       <div>
-        <img className="logo" src={logo} />
+        <Link to="/" onClick={closeMenu}>
+          <img className="logo" src={logo} />
+        </Link>
       </div>
       <ul>
         {isAuthenticated ? (
           <div className={`nav_items ${isOpen && "open"}`}>
-            <li>
+            {/* <li>
               <Link to="/" onClick={closeMenu}>
                 Home
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="user/profile" onClick={closeMenu}>
                 Perfil de usuario
@@ -42,18 +44,18 @@ function Navbar() {
               </Link>
             </li>
             <li onClick={logout}>
-            <Link to="/" onClick={closeMenu}>
+              <Link to="/" onClick={closeMenu}>
                 Salir
               </Link>
             </li>
           </div>
         ) : (
           <div className={`nav_items ${isOpen && "open"}`}>
-            <li>
+            {/* <li>
               <Link to="/" onClick={closeMenu}>
                 Home
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/auth/login" onClick={closeMenu}>
                 Ingresar
@@ -75,7 +77,6 @@ function Navbar() {
         <span></span>
         <span></span>
       </div>
-
     </div>
   );
 }

@@ -46,6 +46,7 @@ label {
 
 .btn-primary:hover {
   background-color: #0056b3;
+  transition: 0.3s all;
 }
 
 .btn-cancelar {
@@ -53,6 +54,10 @@ label {
   padding: 1.2vh;
   border-radius: 50vh;
   color: #ccc;
+}
+.btn-cancelar:hover {
+  background-color: #fa4e4e;
+  transition: 0.3s all;
 }
 
 /*******************  MÓVIL  **********************/
