@@ -21,8 +21,9 @@
   box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
   border-radius: 25px; */
 
+  position: absolute;
   width: 300px;
-  height: 350px;
+  height: auto;
   background-color: #1a1a1a;
   border-radius: 20px;
   transition: all 0.2s;
@@ -48,6 +49,9 @@
   color: white;
   font-size: 1, 5rem;
 }
+p.white-text {
+  margin-left: 1rem;
+}
 .exercise-nombre {
   font-size: 22px;
   background-color: transparent;
@@ -57,9 +61,9 @@
 
 @media (max-width: 768px) {
   .exercise-details {
-    padding: 5%;
+    /* padding: 5%;
     margin: 20px 6%;
-    background: linear-gradient(145deg, #6c02b2c0 0%, #2ec3ec98 100%);
+    background: linear-gradient(145deg, #6c02b2c0 0%, #2ec3ec98 100%); */
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
   }
 }
