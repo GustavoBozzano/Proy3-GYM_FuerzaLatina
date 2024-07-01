@@ -42,7 +42,9 @@ function ExerciseCard({ id, name, typology, muscle_group, equipment, photos }) {
             <span className="underline">Equipamiento:</span>&nbsp; {equipment}
           </p>
         </Link>
-        <LikeToggle exerciseId={id} />
+        <div className="LikeToggle">
+          <LikeToggle exerciseId={id} />
+        </div>
       </div>
     </div>
   );

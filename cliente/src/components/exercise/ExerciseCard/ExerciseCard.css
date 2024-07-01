@@ -52,6 +52,9 @@
 p.white-text {
   margin-left: 1rem;
 }
+.LikeToggle {
+  margin-left: 1rem;
+}
 .exercise-nombre {
   font-size: 22px;
   background-color: transparent;
