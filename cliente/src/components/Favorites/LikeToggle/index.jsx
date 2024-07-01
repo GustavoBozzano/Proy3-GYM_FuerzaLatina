@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from "react";
-import "./likeToogle.css";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
+import './likeToogle.css';
 
 const LikeToggle = ({ exerciseId }) => {
-  const token = localStorage.getItem("token");
-  const userId = token ? JSON.parse(atob(token.split(".")[1])).id : null;
+  const token = localStorage.getItem('token');
+  const userId = token ? JSON.parse(atob(token.split('.')[1])).id : null;
 
   const storedLike = userId
     ? localStorage.getItem(`user-${userId}-exercise-${exerciseId}`)
     : null;
-  const [isLiked, setIsLiked] = useState(storedLike === "true");
+  const [isLiked, setIsLiked] = useState(storedLike === 'true');
 
   const handleLikeToggle = async () => {
     try {
       if (!token || !userId) {
-        console.error("Usuario no autenticado");
+        console.error('Usuario no autenticado');
         return;
       }
 
       if (isLiked) {
         await fetch(`/api/dislike/${exerciseId}`, {
-          method: "DELETE",
+          method: 'DELETE',
           headers: {
             Authorization: token,
           },
         });
       } else {
         await fetch(`/api/exercise/like/${exerciseId}`, {
-          method: "POST",
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
             Authorization: token,
           },
         });
@@ -40,7 +41,7 @@ const LikeToggle = ({ exerciseId }) => {
         (!isLiked).toString()
       );
     } catch (error) {
-      console.error("Error de red:", error);
+      console.error('Error de red:', error);
     }
   };
 
@@ -48,7 +49,7 @@ const LikeToggle = ({ exerciseId }) => {
     const storedLike = userId
       ? localStorage.getItem(`user-${userId}-exercise-${exerciseId}`)
       : null;
-    setIsLiked(storedLike === "true");
+    setIsLiked(storedLike === 'true');
   }, [userId, exerciseId]);
 
   return (
@@ -56,7 +57,7 @@ const LikeToggle = ({ exerciseId }) => {
       <span
         className="like-toggle-heart"
         onClick={handleLikeToggle}
-        style={{ cursor: "pointer", color: isLiked ? "red" : "white" }}
+        style={{ cursor: 'pointer', color: isLiked ? 'red' : 'white' }}
       >
         &#10084;
       </span>

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
-import "./ExerciseCard.css";
-import LikeToggle from "../../Favorites/LikeToggle/index";
+/* eslint-disable react/prop-types */
 
+import { Link } from 'react-router-dom';
+import './ExerciseCard.css';
+import LikeToggle from '../../Favorites/LikeToggle/index';
 
-const defaultExercise = "https://placehold.co/90x90.png";
+const defaultExercise = 'https://placehold.co/90x90.png';
 
 function ExerciseCard({ id, name, typology, muscle_group, equipment, photos }) {
   return (
@@ -34,7 +35,7 @@ function ExerciseCard({ id, name, typology, muscle_group, equipment, photos }) {
             <span className="underline">Tipología:</span>&nbsp; {typology}
           </p>
           <p className="exercise-grupo-muscular white-text">
-            <span className="underline">Grupo Muscular:</span>&nbsp;{" "}
+            <span className="underline">Grupo Muscular:</span>&nbsp;{' '}
             {muscle_group}
           </p>
           <p className="exercise-equipo white-text">

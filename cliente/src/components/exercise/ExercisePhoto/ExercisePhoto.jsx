@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import axios from "axios";
-import auth from "../../../utils/auth";
-import { useNavigate } from "react-router-dom";
-import ErrorModal from "../../Error";
-import "./ExercisePhoto.css";
+import React, { useState } from 'react';
+import axios from 'axios';
+import auth from '../../../utils/auth';
+import { useNavigate } from 'react-router-dom';
+import ErrorModal from '../../Error';
+import './ExercisePhoto.css';
 
 function ExercisePhoto({ exerciseId, onUpload, onClose }) {
   const [file, setFile] = useState(null);
@@ -17,12 +17,12 @@ function ExercisePhoto({ exerciseId, onUpload, onClose }) {
 
   const handleUpload = async () => {
     if (!file) {
-      alert("Por favor selecciona un archivo");
+      alert('Por favor selecciona un archivo');
       return;
     }
 
     const formData = new FormData();
-    formData.append("photo", file);
+    formData.append('photo', file);
 
     try {
       const token = auth.getToken();
@@ -32,13 +32,14 @@ function ExercisePhoto({ exerciseId, onUpload, onClose }) {
         {
           headers: {
             Authorization: token,
-            "Content-Type": "multipart/form-data",
+            'Content-Type': 'multipart/form-data',
           },
         }
       );
-      navigate("/exercise/");
+      console.log(response);
+      navigate('/exercise/');
     } catch (error) {
-      console.error("Error al cargar la foto:", error.response.data.message);
+      console.error('Error al cargar la foto:', error.response.data.message);
       setError(error.response.data.message);
       setShowErrorModal(true);
     }
